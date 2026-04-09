@@ -44,4 +44,25 @@ export class ProdutoService {
             }
         });
     }
+
+    async create(produto: Produto): Promise<Produto> {
+        if (produto.categoria) {
+            await this.categoriaService.findById(produto.categoria.id);
+        }
+        return await this.produtoRepository.save(produto); 
+    }
+
+    async update(produto: Produto): Promise<Produto> {
+        await this.findById(produto.id);
+        if (produto.categoria) {
+            await this.categoriaService.findById(produto.categoria.id);
+        }
+
+        return await this.produtoRepository.save(produto);
+    }
+
+    async delete(id: number): Promise<DeleteResult> {
+        await this.findById(id);
+        return await this.produtoRepository.delete(id);
+    }
 }
