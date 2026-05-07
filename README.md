@@ -1,98 +1,322 @@
+# 🎮 Loja de Games API
+
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+  <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeORM-FE0803?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" />
+  <img src="https://img.shields.io/badge/REST%20API-000000?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge" />
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+---
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 📖 Sobre o Projeto
 
-## Description
+O **Loja de Games API** é uma aplicação backend desenvolvida com **NestJS**, **TypeScript**, **TypeORM** e **MySQL**, focada no gerenciamento de produtos e categorias de uma loja de games através de uma API REST moderna, organizada e escalável.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+O sistema foi estruturado utilizando arquitetura modular e boas práticas de desenvolvimento backend, permitindo operações completas de cadastro, consulta, atualização e remoção de dados.
 
-## Project setup
+O projeto aplica conceitos importantes como:
+
+- Programação Orientada a Objetos
+- Persistência de dados
+- Relacionamento entre entidades
+- Injeção de dependência
+- Validação de dados
+- Tratamento de exceções
+- Arquitetura REST
+
+---
+
+## ✨ Funcionalidades
+
+✅ CRUD completo de categorias  
+✅ CRUD completo de produtos  
+✅ Busca de categorias por ID  
+✅ Busca de categorias por tipo  
+✅ Relacionamento entre produtos e categorias  
+✅ Validação automática de dados  
+✅ Tratamento de erros HTTP  
+✅ Persistência de dados com MySQL  
+✅ API REST estruturada com NestJS  
+✅ CORS habilitado para integração frontend  
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Finalidade |
+|---|---|
+| NestJS | Framework backend |
+| TypeScript | Linguagem principal |
+| Node.js | Ambiente de execução |
+| TypeORM | ORM para banco de dados |
+| MySQL | Banco de dados relacional |
+| class-validator | Validação de dados |
+| class-transformer | Transformação de dados |
+| Jest | Testes automatizados |
+| ESLint | Padronização de código |
+| Prettier | Formatação automática |
+
+---
+
+## 🧠 Conceitos Aplicados
+
+- REST API
+- CRUD
+- Programação Orientada a Objetos
+- Dependency Injection
+- Arquitetura Modular
+- Repository Pattern
+- Relacionamento OneToMany
+- ValidationPipe
+- Tratamento de Exceptions
+- Clean Code
+
+---
+
+## 📂 Estrutura do Projeto
 
 ```bash
-$ npm install
+.
+└── src/
+    ├── categoria/
+    │   ├── controllers/
+    │   │   └── categoria.controller.ts
+    │   ├── entities/
+    │   │   └── categoria.entity.ts
+    │   ├── services/
+    │   │   └── categoria.service.ts
+    │   └── categoria.module.ts
+    │
+    ├── produto/
+    │   ├── controllers/
+    │   │   └── produto.controller.ts
+    │   ├── entities/
+    │   │   └── produto.entity.ts
+    │   ├── services/
+    │   │   └── produto.service.ts
+    │   └── produto.module.ts
+    │
+    ├── app.controller.spec.ts
+    ├── app.controller.ts
+    ├── app.module.ts
+    ├── app.service.ts
+    └── main.ts
 ```
 
-## Compile and run the project
+---
+
+## ⚙️ Pré-requisitos
+
+Antes de executar o projeto, é necessário ter instalado:
+
+- Node.js
+- npm
+- NestJS CLI
+- MySQL
+
+---
+
+## 🚀 Instalação e Execução
+
+### 1️⃣ Clone o repositório
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+git clone https://github.com/seu-usuario/loja_de_games.git
 ```
 
-## Run tests
+---
+
+### 2️⃣ Acesse a pasta do projeto
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+cd loja_de_games
 ```
 
-## Deployment
+---
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### 3️⃣ Instale as dependências
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+npm install
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+---
 
-## Resources
+### 4️⃣ Configure o banco de dados
 
-Check out a few resources that may come in handy when working with NestJS:
+Crie um banco MySQL com o nome:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+```sql
+CREATE DATABASE db_loja_de_games;
+```
 
-## Support
+---
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### 5️⃣ Execute a aplicação
 
-## Stay in touch
+```bash
+npm run start:dev
+```
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+---
 
-## License
+## 🔗 Endpoints da API
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+### 📦 Categorias
+
+| Método | Endpoint | Descrição |
+|---|---|---|
+| GET | `/categorias` | Lista todas as categorias |
+| GET | `/categorias/:id` | Busca categoria por ID |
+| GET | `/categorias/tipo/:tipo` | Busca categoria por tipo |
+| POST | `/categorias` | Cria uma categoria |
+| PUT | `/categorias` | Atualiza uma categoria |
+| DELETE | `/categorias/:id` | Remove uma categoria |
+
+---
+
+### 🎮 Produtos
+
+| Método | Endpoint | Descrição |
+|---|---|---|
+| GET | `/produtos` | Lista todos os produtos |
+| GET | `/produtos/:id` | Busca produto por ID |
+| POST | `/produtos` | Cria um produto |
+| PUT | `/produtos` | Atualiza um produto |
+| DELETE | `/produtos/:id` | Remove um produto |
+
+---
+
+## 💻 Exemplo de Requisição
+
+### ▶️ Criar categoria
+
+```http
+POST /categorias
+```
+
+### 📨 Body
+
+```json
+{
+  "tipo": "RPG"
+}
+```
+
+### ✅ Resposta
+
+```json
+{
+  "id": 1,
+  "tipo": "RPG"
+}
+```
+
+---
+
+## 🛡️ Resiliência e Tratamento de Erros
+
+O sistema implementa tratamento de exceções utilizando os recursos nativos do NestJS.
+
+### ✔️ Categoria não encontrada
+
+```json
+{
+  "statusCode": 404,
+  "message": "Categoria não encontrada!"
+}
+```
+
+---
+
+### ✔️ Validação automática de dados
+
+O projeto utiliza:
+
+- `ValidationPipe`
+- `class-validator`
+- Decorators de validação
+- Respostas HTTP apropriadas
+
+---
+
+### ✔️ Busca segura no banco
+
+As operações utilizam:
+
+- Repository Pattern
+- TypeORM Repository
+- Queries tipadas
+- Busca parcial utilizando `ILike`
+
+---
+
+## 🧪 Testes e Validação
+
+O projeto possui configuração pronta para testes automatizados com Jest.
+
+### ▶️ Executar testes
+
+```bash
+npm run test
+```
+
+---
+
+### ▶️ Gerar cobertura
+
+```bash
+npm run test:cov
+```
+
+---
+
+### Cenários validados
+
+| Cenário | Resultado Esperado |
+|---|---|
+| Cadastro de categoria | Dados persistidos |
+| Busca por ID | Retorno correto |
+| Busca inexistente | Erro 404 |
+| Atualização | Dados alterados |
+| Exclusão | Registro removido |
+| Validação de campos | Requisição bloqueada |
+
+---
+
+## 📚 Aprendizados
+
+Este projeto permitiu aprofundar conhecimentos em:
+
+- Desenvolvimento backend com NestJS
+- APIs REST com TypeScript
+- Persistência de dados com TypeORM
+- Relacionamentos entre entidades
+- Arquitetura modular
+- Injeção de dependência
+- Tratamento de exceções
+- Estruturação profissional de backend
+
+---
+
+## 🔮 Melhorias Futuras
+
+- Autenticação JWT
+- Swagger Documentation
+- Sistema de usuários
+- Upload de imagens
+- Paginação de resultados
+- Dockerização da aplicação
+- Deploy em nuvem
+- Logs e monitoramento
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Yasmin Guidella** 🚀
